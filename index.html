@@ -1,1 +1,378 @@
 
+<html lang="en">
+
+<head>
+
+    <!-- meta tag -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Black Corvette</title>
+
+    <!-- link tag -->
+    <link rel="stylesheet" href="">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(to right, #000000, #1a1a1a);
+            color: white;
+            font-family: Arial, sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* Animated background */
+        body::before {
+            content: "";
+            position: fixed;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 0, 0, 0.15), transparent);
+            animation: moveBg 10s linear infinite;
+            z-index: -1;
+        }
+
+        @keyframes moveBg {
+            0% {
+                transform: translate(-10%, -10%);
+            }
+
+            50% {
+                transform: translate(-20%, -15%);
+            }
+
+            100% {
+                transform: translate(-10%, -10%);
+            }
+        }
+
+        header {
+            text-align: center;
+            padding: 40px;
+            background-color: rgba(0, 0, 0, 0.8);
+            border-bottom: 3px solid red;
+            animation: fadeDown 2s ease;
+        }
+
+        @keyframes fadeDown {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h1 {
+            font-size: 55px;
+            color: red;
+            letter-spacing: 5px;
+            text-shadow: 0px 0px 20px red;
+            animation: glow 2s infinite alternate;
+        }
+
+        @keyframes glow {
+            from {
+                text-shadow: 0px 0px 10px red;
+            }
+
+            to {
+                text-shadow: 0px 0px 25px white;
+            }
+        }
+
+        section {
+            padding: 30px;
+        }
+
+        div {
+            width: 85%;
+            margin: 30px auto;
+            padding: 25px;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(5px);
+            box-shadow: 0px 0px 20px rgba(255, 0, 0, 0.3);
+
+            animation: slideUp 1.5s ease;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h2 {
+            color: red;
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        span {
+            color: red;
+            font-weight: bold;
+        }
+
+        /* Image animation */
+        img {
+            width: 300px;
+            height: 200px;
+            margin: 15px;
+#ffc700            border-radius: 15px;
+            border: 3px solid white;
+            transition: 0.5s;
+            animation: float 4s infinite ease-in-out;
+        }
+
+        img:hover {
+            transform: scale(1.08) rotate(2deg);
+            border-color: red;
+            box-shadow: 0px 0px 20px red;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        ul {
+            margin-top: 20px;
+        }
+
+        li {
+            margin: 10px 0;
+            font-size: 18px;
+            transition: 0.3s;
+        }
+
+        li:hover {
+            color: red;
+            transform: translateX(10px);
+        }
+
+        a {
+            color: cyan;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        a:hover {
+            color: red;
+        }
+
+        input {
+            width: 70%;
+            padding: 12px;
+            margin-top: 20px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 12px 20px;
+            border: none;
+            background: red;
+            color: white;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 15px;
+            transition: 0.4s;
+        }
+
+        button:hover {
+            background: darkred;
+            transform: scale(1.1);
+        }
+
+        footer {
+            background-color: black;
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+            border-top: 2px solid red;
+        }
+
+        /* Moving car animation */
+        .car-animation {
+            position: relative;
+            width: 100%;
+            height: 120px;
+            overflow: hidden;
+            margin-top: 20px;
+        }
+
+        .car {
+            position: absolute;
+            font-size: 70px;
+            animation: drive 8s linear infinite;
+        }
+
+        @keyframes drive {
+            from {
+                left: -150px;
+            }
+
+            to {
+                left: 100%;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- header -->
+    <header>
+        <h1>BLACK CORVETTE</h1>
+        <p>Luxury • Speed • Power</p>
+    </header>
+
+    <!-- section -->
+    <section>
+
+        <!-- div -->
+        <div>
+
+            <h2>About Black Corvette</h2>
+
+            <!-- paragraph -->
+            <p>
+                The <span>Black Corvette</span> is one of the most stylish and powerful sports cars ever made.
+                It combines speed, luxury, and advanced technology into one amazing machine.
+                Its dark glossy body and aggressive design make it stand out on roads and race tracks.
+            </p>
+
+            <p>
+                Corvette cars are famous for high performance engines, aerodynamic design,
+                and premium interiors. Car lovers admire the black edition because it gives
+                a bold and mysterious appearance.
+            </p>
+            
+
+</div>
+
+            <!-- anchor -->
+            <a href="https://www.chevrolet.com/performance/corvette" target="_blank">
+                Visit Corvette Official Website
+            </a>
+
+        </div>
+
+        <!-- gallery -->
+        <div>
+
+            <h2>Black Corvette Gallery</h2>
+
+            <!-- img -->
+            <img src="https://images.unsplash.com/photo-1511919884226-fd3cad34687c?q=80&w=1200&auto=format&fit=crop"
+    alt="Black Corvette 1">
+
+<img src="https://images.unsplash.com/photo-1502877338535-766e1452684a?q=80&w=1200&auto=format&fit=crop"
+    alt="Black Corvette 2">
+
+<img src="https://images.unsplash.com/photo-1494905998402-395d579af36f?q=80&w=1200&auto=format&fit=crop"
+    alt="Black Corvette 3">
+                
+
+        </div>
+
+        <!-- features -->
+        <div>
+
+            <h2>Top Features</h2>
+
+            <!-- ul and li -->
+            <ul>
+                <li>Powerful V8 Engine</li>
+                <li>Luxury Interior Design</li>
+                <li>Advanced Digital Display</li>
+                <li>Fast Acceleration</li>
+                <li>Premium Black Finish</li>
+                <li>Sports Aerodynamics</li>
+            </ul>
+
+        </div>
+
+        <!-- feedback -->
+        <div>
+
+            <h2>Fan Feedback</h2>
+
+            <p>Enter your favorite Corvette model:</p>
+
+            <!-- input -->
+            <input type="text" placeholder="Example: Corvette C8">
+
+            <br>
+
+            <button onclick="showMessage()">Submit</button>
+
+        </div>
+
+        <!-- animation div -->
+        <div class="car-animation">
+
+            <div class="car">🏎️</div>
+
+        </div>
+
+    </section>
+
+    <!-- footer -->
+    <footer>
+
+        <p>Black Corvette Fan Page | HTML • CSS • JavaScript</p>
+
+    </footer>
+
+    <!-- script tag -->
+    <script>
+
+        function showMessage() {
+            alert("Thanks for sharing your favorite Corvette model!");
+        }
+
+        console.log("Animated Corvette Website Loaded");
+
+    </script>
+  footer>
+
+    <p class="credit">Made By Amna Abid</p>
+
+</footer>
+    
+    
+
+</body>
+
+</html>
